@@ -1,0 +1,73 @@
+### univariate correlations - ENTIRE COHORT###
+###PAA ratio###
+with(cardiac_asthma, cor.test(wholelungvolume_ht_m,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(WholeLung950,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(air_trapping_856,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(preFEV1_Quanpct_pred,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(preFVC_Quanpct_pred,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(act_score,PAA_ratio,method="pearson"))
+###RVLV ratio###
+with(cardiac_asthma, cor.test(wholelungvolume_ht_m,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(WholeLung950,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(air_trapping_856,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(preFEV1_Quanpct_pred,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(preFVC_Quanpct_pred,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(act_score,RV_LV_epi_ratio,method="pearson"))
+###RV - BSA normalized###
+with(cardiac_asthma, cor.test(wholelungvolume_ht_m,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(WholeLung950,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(air_trapping_856,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFEV1_Quanpct_pred,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFVC_Quanpct_pred,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(act_score,vol_epi_RV_BSAI,method="pearson"))
+###LV - BSA normalized###
+with(cardiac_asthma, cor.test(wholelungvolume_ht_m,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(WholeLung950,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(air_trapping_856,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFEV1_Quanpct_pred,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFVC_Quanpct_pred,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(act_score,vol_epi_LV_BSAI,method="pearson"))
+###Total Ventricular Volume - BSA normalized###
+with(cardiac_asthma, cor.test(wholelungvolume_ht_m,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(WholeLung950,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(air_trapping_856,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFEV1_Quanpct_pred,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(preFVC_Quanpct_pred,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(act_score,RV_LV_epi_vol_BSAI,method="pearson"))
+
+############Univariate correlations -THOSE WITHOUT EMPHYSEMA#####
+###PAA ratio###
+with(subset(cardiac_asthma, emphysema==0), cor.test(wholelungvolume_ht_m,PAA_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(WholeLung950,PAA_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(air_trapping_856,PAA_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFEV1_Quanpct_pred,PAA_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFVC_Quanpct_pred,PAA_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(act_score,PAA_ratio,method="pearson"))
+###RVLV###
+with(subset(cardiac_asthma, emphysema==0), cor.test(wholelungvolume_ht_m,RV_LV_epi_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(WholeLung950,RV_LV_epi_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(air_trapping_856,RV_LV_epi_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFEV1_Quanpct_pred,RV_LV_epi_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFVC_Quanpct_pred,RV_LV_epi_ratio,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(act_score,RV_LV_epi_ratio,method="pearson"))
+###RV - BSA normalized###
+with(subset(cardiac_asthma, emphysema==0), cor.test(wholelungvolume_ht_m,vol_epi_RV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(WholeLung950,vol_epi_RV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(air_trapping_856,vol_epi_RV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFEV1_Quanpct_pred,vol_epi_RV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFVC_Quanpct_pred,vol_epi_RV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(act_score,vol_epi_RV_BSAI,method="pearson"))
+###LV - BSA normalized###
+with(subset(cardiac_asthma, emphysema==0), cor.test(wholelungvolume_ht_m,vol_epi_LV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(WholeLung950,vol_epi_LV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(air_trapping_856,vol_epi_LV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFEV1_Quanpct_pred,vol_epi_LV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFVC_Quanpct_pred,vol_epi_LV_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(act_score,vol_epi_LV_BSAI,method="pearson"))
+###Total Ventricular Volume - BSA normalized###
+with(subset(cardiac_asthma, emphysema==0), cor.test(wholelungvolume_ht_m,RV_LV_epi_vol_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(WholeLung950,RV_LV_epi_vol_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(air_trapping_856,RV_LV_epi_vol_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFEV1_Quanpct_pred,RV_LV_epi_vol_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(preFVC_Quanpct_pred,RV_LV_epi_vol_BSAI,method="pearson"))
+with(subset(cardiac_asthma, emphysema==0), cor.test(act_score,RV_LV_epi_vol_BSAI,method="pearson"))
