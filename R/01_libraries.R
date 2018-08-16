@@ -1,7 +1,4 @@
 ### Load required Libraries ###
-require(lme4)
-require(ggplot2)
-require(plyr)
 require(tidyverse)
 require(haven)
 require(readxl)
@@ -14,7 +11,6 @@ require(boot)
 require(pastecs)
 require(pscl)
 require(RMThreshold)
-require(MASS)
 
 options(digits = 3)
 options(scipen = 999)
