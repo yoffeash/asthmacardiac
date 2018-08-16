@@ -2,7 +2,7 @@
 require(lme4)
 require(ggplot2)
 require(plyr)
-require(dplyr)
+require(tidyverse)
 require(haven)
 require(readxl)
 require(ggpubr)
