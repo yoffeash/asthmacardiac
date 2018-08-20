@@ -12,3 +12,7 @@ length(na.omit(cardiac_asthma$heart_rate))
 ##age at diagnosis##
 stat.desc(cardiac_asthma$age_dx)
 length(na.omit(cardiac_asthma$age_dx))
+
+##duration of disease##
+stat.desc(cardiac_asthma$duration_dx)
+length(na.omit(cardiac_asthma$duration_dx))

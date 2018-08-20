@@ -1,24 +1,36 @@
 ### relationship between PAA, RVLV and cardiac measures with age at onset and duration of illness ###
 # Notes:
 ## no clear relationships
+options(digits = 3)
 
 ### univariate correlations ###
 ###PAA ratio###
 with(cardiac_asthma, cor.test(age_dx,PAA_ratio,method="pearson"))
 with(cardiac_asthma, cor.test(duration_dx,PAA_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(age_spiro,PAA_ratio,method="pearson"))
 ###RVLV ratio###
 with(cardiac_asthma, cor.test(age_dx,RV_LV_epi_ratio,method="pearson"))
 with(cardiac_asthma, cor.test(duration_dx,RV_LV_epi_ratio,method="pearson"))
+with(cardiac_asthma, cor.test(age_spiro,RV_LV_epi_ratio,method="pearson"))
 ###RV - BSA normalized###
 with(cardiac_asthma, cor.test(age_dx,vol_epi_RV_BSAI,method="pearson"))
 with(cardiac_asthma, cor.test(duration_dx,vol_epi_RV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(age_spiro,vol_epi_RV_BSAI,method="pearson"))
 ###LV - BSA normalized###
 with(cardiac_asthma, cor.test(age_dx,vol_epi_LV_BSAI,method="pearson"))
 with(cardiac_asthma, cor.test(duration_dx,vol_epi_LV_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(age_spiro,vol_epi_LV_BSAI,method="pearson"))
 ###Total Ventricular Volume - BSA normalized###
 with(cardiac_asthma, cor.test(age_dx,RV_LV_epi_vol_BSAI,method="pearson"))
 with(cardiac_asthma, cor.test(duration_dx,RV_LV_epi_vol_BSAI,method="pearson"))
+with(cardiac_asthma, cor.test(age_spiro,RV_LV_epi_vol_BSAI,method="pearson"))
 
+####duration of disease in those without emphysema####
+with(subset(cardiac_asthma, emphysema==0), cor.test(duration_dx,PAA_ratio,method="pearson")$p.value)
+with(subset(cardiac_asthma, emphysema==0), cor.test(duration_dx,RV_LV_epi_ratio,method="pearson")$p.value)
+with(subset(cardiac_asthma, emphysema==0), cor.test(duration_dx,vol_epi_RV_BSAI,method="pearson")$p.value)
+with(subset(cardiac_asthma, emphysema==0), cor.test(duration_dx,vol_epi_LV_BSAI,method="pearson")$p.value)
+with(subset(cardiac_asthma, emphysema==0), cor.test(duration_dx,RV_LV_epi_vol_BSAI,method="pearson")$p.value)
 
 ### univariate dichotomized at age 13 for onset ###
 cardiac_asthma$child_onset_13_label <- ifelse(cardiac_asthma$child_onset_13 == 1, "Onset < 13", "Onset > 13")
