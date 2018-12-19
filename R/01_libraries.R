@@ -11,6 +11,7 @@ require(boot)
 require(pastecs)
 require(pscl)
 require(RMThreshold)
+require(psych)
 
 options(digits = 3)
 options(scipen = 999)
